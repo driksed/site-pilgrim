@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PILGRIM | Comptoir Végétal &amp; Concept Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#dce4e9",
+                      "on-primary-container": "#969fa3",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdbcd",
+                      "on-background": "#1b1c19",
+                      "primary-fixed-dim": "#bfc8cd",
+                      "secondary-fixed": "#dae2ff",
+                      "tertiary": "#3c1200",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "surface-dim": "#dbdad5",
+                      "surface-container": "#f0eee9",
+                      "on-primary-fixed": "#151d20",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#43474a",
+                      "surface": "#fbf9f4",
+                      "primary-container": "#2e363a",
+                      "secondary-container": "#5f8ffd",
+                      "on-primary-fixed-variant": "#40484c",
+                      "secondary-fixed-dim": "#b1c5ff",
+                      "on-error": "#ffffff",
+                      "secondary": "#1c58c4",
+                      "background": "#fbf9f4",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#30312e",
+                      "on-secondary-fixed": "#001946",
+                      "surface-variant": "#e4e2dd",
+                      "surface-container-high": "#eae8e3",
+                      "inverse-primary": "#bfc8cd",
+                      "on-primary": "#ffffff",
+                      "outline": "#74787a",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f2f1ec",
+                      "on-tertiary-container": "#de875f",
+                      "on-tertiary-fixed-variant": "#753413",
+                      "surface-bright": "#fbf9f4",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f5f3ee",
+                      "on-secondary-container": "#002868",
+                      "primary": "#192125",
+                      "surface-container-highest": "#e4e2dd",
+                      "on-secondary-fixed-variant": "#00419f",
+                      "on-surface": "#1b1c19",
+                      "outline-variant": "#c4c7c9",
+                      "tertiary-container": "#5d2202",
+                      "on-tertiary-fixed": "#360f00",
+                      "surface-tint": "#576064"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "24px",
+                      "xs": "4px",
+                      "xl": "80px",
+                      "sm": "12px",
+                      "margin": "32px",
+                      "lg": "48px",
+                      "gutter": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Newsreader"],
+                      "headline-xl": ["Newsreader"],
+                      "label-md": ["Epilogue"],
+                      "body-md": ["Epilogue"],
+                      "headline-lg": ["Newsreader"],
+                      "body-lg": ["Epilogue"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .chalkboard-texture {
+            background-color: #1b1c19;
+            background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 100%);
+            position: relative;
+        }
+        .chalkboard-texture::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .dotted-leader {
+            flex-grow: 1;
+            border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
+            margin: 0 8px;
+            margin-bottom: 6px;
+        }
+        .paper-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#F9F7F2] dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 shadow-sm opacity-50 backdrop-blur-md">
+<nav class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+<div class="text-2xl font-headline-xl italic tracking-tight text-stone-900 dark:text-stone-50">PILGRIM</div>
+<div class="hidden md:flex items-center gap-xl">
+<a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary font-label-md transition-all duration-300" href="#comptoir">Le Comptoir</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 font-label-md transition-all duration-300" href="#concept">Le Concept Store</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 font-label-md transition-all duration-300" href="#slow-life">Slow Life</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 font-label-md transition-all duration-300" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="hover:opacity-80 transition-all duration-300">
+<span class="material-symbols-outlined text-on-surface" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:opacity-80 transition-all duration-300">
+<span class="material-symbols-outlined text-on-surface" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[921px] min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-75" data-alt="A warm, atmospheric wide shot of an artisanal French shop front named PILGRIM. The facade features rustic weathered wood, climbing ivy, and large glass windows revealing a cozy interior filled with plants and ceramics. Soft morning sunlight filters through the trees, casting gentle shadows across the cobblestone street. The overall mood is peaceful and grounded, reflecting a slow life aesthetic with a palette of warm ochre and deep greens." src="https://lh3.googleusercontent.com/aida/ADBb0uiwLsIUxjWLfxjRoiTsChMx0mERoLWNW0nK455HVAxxs2JIeDi6W-TFdzyimB7w33gcYPhDMsuIyBFOas5Gug7NU4CTvPiY8iAb-KajWYf6KeNGJDGq2qtW5iwwrDLijX6kwx75VB32kZHueSuVbjIsY0-LB8Qvc8gXSp-Dpk93qql9GvPBGBDTlqWDwLPS9VI1eb0nqYbvEyZzIkBRKP2kAYAhldorgy3JP6083wdgNPt088OpnYifKaWN97lngMVPDvUzMTZxXw"/>
+</div>
+<div class="relative z-10 text-center text-white px-margin max-w-4xl">
+<h1 class="font-headline-xl text-[64px] md:text-[96px] italic mb-xs drop-shadow-lg">PILGRIM</h1>
+<p class="font-headline-md text-headline-md italic mb-lg tracking-wide opacity-90">Comptoir Végétal &amp; Concept Store</p>
+<div class="flex flex-wrap justify-center gap-md">
+<span class="px-md py-sm border border-white/40 backdrop-blur-sm rounded-full font-label-md text-white uppercase tracking-widest">Slow Life</span>
+<span class="px-md py-sm border border-white/40 backdrop-blur-sm rounded-full font-label-md text-white uppercase tracking-widest">Slow Food</span>
+<span class="px-md py-sm border border-white/40 backdrop-blur-sm rounded-full font-label-md text-white uppercase tracking-widest">Vegetarian Food</span>
+</div>
+</div>
+</section>
+<!-- Le Comptoir Menu Section -->
+<section class="py-xl bg-surface-container" id="comptoir">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid lg:grid-cols-2 gap-xl items-start">
+<div class="space-y-lg">
+<h2 class="font-headline-xl italic text-primary">Le Comptoir</h2>
+<p class="font-body-lg text-on-surface-variant max-w-lg">
+                            Une cuisine vivante, préparée chaque jour avec amour. Nos ingrédients sont issus de l'agriculture locale et biologique, pour une expérience gustative authentique.
+                        </p>
+<div class="rounded-xl overflow-hidden shadow-xl relative aspect-video bg-stone-200">
+<img class="w-full h-full object-contain" data-alt="Photo of the handwritten chalkboards showing the daily menu and drinks at PILGRIM." src="https://lh3.googleusercontent.com/aida/ADBb0uh2LCNhdlU6e36tXpZNIOEeYfw8zlg_Cj0hfqRWzHLmYDBJXhI6oYdDZwSPWBn9TNcUtVAHEVa-Oc3fBb3W_bYXVbIKOJmuA-dABPVShNXrVztPaxrf2yhg-Ol8SRrtnGexVJD-L3Qd6ZR_7HoaRh0TvztSl0AvPhQAzoyKBbyCI1_v4-5ipnvXHjd2qe9zOjhR1GetJdnVtvp8E34ur_hqMS620AgUFyKbVjm3vfudNyCSDP401LwLPo-qOGsn1UyJRueK1f4ZlQ"/>
+</div>
+</div>
+<div class="chalkboard-texture p-12 rounded-lg border-8 border-tertiary-container shadow-2xl">
+<div class="relative z-10 font-headline-md text-white">
+<h3 class="text-center text-headline-lg italic mb-xl underline decoration-tertiary">La Carte du Moment</h3>
+<div class="space-y-8"><div><h4 class="font-label-md uppercase tracking-widest text-secondary-fixed mb-4">Le Menu Good Karma (100% Veggie)</h4><div class="space-y-4"><div class="flex flex-col gap-2"><div class="flex items-end"><span class="italic font-headline-md">Assiette repas déjeuner</span><div class="dotted-leader"></div><span class="font-label-md">16.90€</span></div><p class="text-xs text-white/70 italic leading-relaxed">Dahl de lentilles corail, Bharta d'aubergines, Riz parfumé à la cardamome, Pickle de mangues, Salade Vate, Spirales de courgettes, chou rouge, cébettes, mix de graines, vinaigrette sésame soja.</p></div></div></div><div><h4 class="font-label-md uppercase tracking-widest text-secondary-fixed mb-4">Desserts</h4><div class="space-y-4"><div class="flex items-end"><span class="italic font-headline-md">Gâteau au citron pavot lemon curd</span><div class="dotted-leader"></div><span class="font-label-md">5.50€</span></div><div class="flex items-end"><span class="italic font-headline-md">Coupe douceur mangues &amp; coco + zeste</span><div class="dotted-leader"></div><span class="font-label-md">4.50€</span></div></div></div><div><h4 class="font-label-md uppercase tracking-widest text-secondary-fixed mb-4">Boissons</h4><div class="grid grid-cols-1 gap-2 text-sm md:text-base"><div class="flex items-end"><span class="italic font-headline-md">Jus d'orange, pomme, tomate</span><div class="dotted-leader"></div><span class="font-label-md">4.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Verre de vin (12cl): Rouge, Blanc, Rosé</span><div class="dotted-leader"></div><span class="font-label-md">4.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Pichet 50cl - Vin culture raisonnée</span><div class="dotted-leader"></div><span class="font-label-md">10.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Kir châtaigne ou Mûre</span><div class="dotted-leader"></div><span class="font-label-md">5.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Eau plate 50cl</span><div class="dotted-leader"></div><span class="font-label-md">3.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Eau pétillante 50cl / 1.10L</span><div class="dotted-leader"></div><span class="font-label-md">3.50€ / 5.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Perrier 33cl</span><div class="dotted-leader"></div><span class="font-label-md">4.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Limonade fleur d'oranger (maison)</span><div class="dotted-leader"></div><span class="font-label-md">4.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Limonade gingembre</span><div class="dotted-leader"></div><span class="font-label-md">4.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Café expresso / noisette</span><div class="dotted-leader"></div><span class="font-label-md">2.00€ / 2.30€</span></div><div class="flex items-end"><span class="italic font-headline-md">Thé bio</span><div class="dotted-leader"></div><span class="font-label-md">4.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Bières Heineken - Grimbergen</span><div class="dotted-leader"></div><span class="font-label-md">4.00€</span></div><div class="flex items-end"><span class="italic font-headline-md">Bière Jade Bio</span><div class="dotted-leader"></div><span class="font-label-md">4.50€</span></div><div class="flex items-end"><span class="italic font-headline-md">Golden Latté</span><div class="dotted-leader"></div><span class="font-label-md">4.50€</span></div><div class="flex items-end"><span class="italic font-headline-md">Matcha Latté (+0,50€ lait d'avoine)</span><div class="dotted-leader"></div><span class="font-label-md">4.50€</span></div></div></div></div>
+<div class="mt-xl text-center">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed" data-icon="restaurant">restaurant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Le Concept Store Section -->
+<section class="py-xl" id="concept">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="text-center mb-xl">
+<h2 class="font-headline-xl italic text-primary mb-md">Le Concept Store</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Une sélection rigoureuse d'objets qui racontent une histoire. Du beau, de l'utile, du durable.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<div class="group bg-surface-container-low p-base rounded-lg border border-surface-variant hover:border-outline-variant transition-all duration-500">
+<div class="overflow-hidden rounded-lg aspect-square mb-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A curated shelf inside the PILGRIM concept store displaying local terroir products. Rows of artisan honey jars, bottles of olive oil with minimalist labels, and dried herbs in brown paper bags are neatly arranged on weathered wooden shelves. The lighting is warm and directional, creating a premium yet rustic atmosphere that emphasizes the organic quality of the products." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk2avxSIZfncbt6mPTgSNm-oirOxYnHkBIescrsJA7x0BPRWKKsyhHyOZKLybPZ85xgBU0vBEvse-53DM3f4Jcv8WGxU330BQCNNQWtJQtldteONtxVkhTr3DmD2arEtFMTzbGSrTx5kxcZApWm7FuMfvQe2cHX8wd7B8hdtqcIP4MzFVQFp4NYv0zXJV6-z8B3kpNxUH47xwZPRSDVVDnIOoGYkLXjzz99jOJToJl_lvE7JOSgHmRNTzBiQM-tHHAH7XoHlyZ4SON"/>
+</div>
+<div class="px-sm pb-sm">
+<h3 class="font-headline-md italic mb-xs text-primary">Produits du Terroir</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Épicerie fine, huiles, miels et infusions sauvages de nos régions.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-low p-base rounded-lg border border-surface-variant hover:border-outline-variant transition-all duration-500 md:translate-y-base">
+<div class="overflow-hidden rounded-lg aspect-square mb-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A beautiful corner of the decoration section at PILGRIM. Hand-thrown terracotta pots and minimalist ceramic vases are grouped on a low wooden table. A linen cloth is draped nearby, and a large sun-drenched window in the background illuminates the textures of the stone and fabric. The style is artisanal and calm, featuring earthy tones and a sense of slow craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCshng3HWJBHHXhM0IsJ8KsDUgU3GiUzA1f_aUp7oM3thAcElIyEnotXGccbPO_tzy1CnJ0pAVhnpOiAk83z6vXh68QN1axaKRJ7NvAW24Sw_uJBp6T_qgYJQB0SzRJ5rkCfcvdyIm-XxucRzzS9uB0JIaIwHkLFhFyVch5V04YDjGtJKQMuenOh2zprgNXoGacc1804LSrCbCM6Yly2eJiS_gaIwEPp_JFBH7RnoUak3RmxHMWQwZxzNTxGsRLk5A2hHocNT7hKrXG"/>
+</div>
+<div class="px-sm pb-sm">
+<h3 class="font-headline-md italic mb-xs text-primary">Décoration</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Céramiques artisanales, linges de maison en lin et objets de curiosité.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-low p-base rounded-lg border border-surface-variant hover:border-outline-variant transition-all duration-500">
+<div class="overflow-hidden rounded-lg aspect-square mb-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="The wellness section at PILGRIM showing a collection of natural skincare products and soy wax candles. The items are displayed on a white marble plinth surrounded by sprigs of dried lavender and eucalyptus. The lighting is soft and bright, creating a clean, botanical-inspired look that promotes health and tranquility. The colors are muted pastels and whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw31saiC8cIJHiXNG0bCN5YjOSe_wWG4Gh3iKsS478RD8yjCutBkcyri9PTkOmrmRzLPTbAh3AN26KNv3kwyh7p4nEIzeMu9xMxDQb2UpvblZ0xN-sa0IJSqOsLs5Hpy_ZyenbNHMTvxHeU0cG1akhjhPxxZTcFDnWsMrORtLOx9QXxXfd1D1ImAlso7X9vF9XDvhVMYrbJt5BAbDwU6qbcOljwR3k1nythG3rmEWcbbiuimZj2hX2CICDIbgDKCpMLJHZ--HbSsLB"/>
+</div>
+<div class="px-sm pb-sm">
+<h3 class="font-headline-md italic mb-xs text-primary">Bien-être</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Soins naturels, bougies botaniques et rituels de saison.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Slow Life Philosophy -->
+<section class="py-xl bg-primary text-surface relative overflow-hidden" id="slow-life">
+<div class="paper-texture absolute inset-0"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10">
+<div class="grid md:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<img class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="A vintage-style wooden sign at the entrance of PILGRIM that reads 'Vente d'oeufs plein air' in elegant, hand-painted lettering. The sign is surrounded by wicker baskets filled with fresh vegetables and wildflowers. The background shows the sun-dappled interior of the shop with warm wood tones. This image emphasizes the local, farm-to-table commitment of the brand in an artisanal sanctuary style." src="https://lh3.googleusercontent.com/aida/ADBb0uhmpjo1Y18wOeIM-sf95g_8gSlZidgw79dYtjv57KUbkG9jJ3lvypz6Y0LNd39AtfGDrL9Vy-PUmd0tcqqkFO2u7YF0XxRzFm3g180g8gDxP1N20NYJYqZ9l3JtJyiwedwy_s0o3njN8CWWl4A25NcFF8Vc0VALCNNLY7vP-8ULxhHioTid5IIJzWyUjyEiwH566J3GiFqeEPpT_4bb36aVnJCjC4DalDrgcATGy_vt95yBwPoGoyGon1F6CLT4Y13e1nYfW_yu-g"/>
+</div>
+<div class="space-y-lg">
+<h2 class="font-headline-xl italic">La Philosophie Slow</h2>
+<p class="font-body-lg opacity-80 leading-relaxed">
+                            PILGRIM est une parenthèse. Nous croyons en la qualité plutôt qu'en la quantité. Chaque produit, chaque plat est le fruit d'une rencontre avec un producteur passionné ou un artisan talentueux.
+                        </p>
+<div class="grid grid-cols-2 gap-md pt-md">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" data-icon="eco">eco</span>
+<div>
+<h4 class="font-label-md uppercase mb-xs">100% Végétal</h4>
+<p class="text-sm opacity-70">Directement de la ferme à votre assiette. Vente d'œufs plein air : 3€ les 6.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" data-icon="local_shipping">local_shipping</span>
+<div>
+<h4 class="font-label-md uppercase mb-xs">Circuit Court</h4>
+<p class="text-sm opacity-70">Directement de la ferme à votre assiette. Vente d'œufs plein air : 3€ les 6.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" data-icon="workspace_premium">workspace_premium</span>
+<div>
+<h4 class="font-label-md uppercase mb-xs">Qualité</h4>
+<p class="text-sm opacity-70">Directement de la ferme à votre assiette. Vente d'œufs plein air : 3€ les 6.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" data-icon="volunteer_activism">volunteer_activism</span>
+<div>
+<h4 class="font-label-md uppercase mb-xs">Bienveillance</h4>
+<p class="text-sm opacity-70">Directement de la ferme à votre assiette. Vente d'œufs plein air : 3€ les 6.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Location -->
+<section class="py-xl bg-surface" id="contact">
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full border-t border-stone-800 py-12 px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="space-y-4">
+<div class="text-xl font-headline-xl italic text-stone-100">PILGRIM</div>
+<p class="font-body-md text-stone-300 text-sm max-w-xs">© 2024 PILGRIM comptoir végétal &amp; concept store. Made with Slow Life philosophy.</p>
+</div>
+<div class="flex flex-wrap gap-xl">
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-secondary-fixed uppercase">Explorer</span>
+<a class="text-stone-500 hover:text-stone-200 transition-colors font-body-md text-sm" href="#">Instagram</a>
+<a class="text-stone-500 hover:text-stone-200 transition-colors font-body-md text-sm" href="#">Facebook</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-secondary-fixed uppercase">Informations</span>
+<a class="text-stone-500 hover:text-stone-200 transition-colors font-body-md text-sm" href="#">Location &amp; Hours</a>
+<a class="text-stone-500 hover:text-stone-200 transition-colors font-body-md text-sm" href="#">Sustainability Charter</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
